@@ -1,0 +1,34 @@
+{
+    "org": "$HZN_ORG_ID",
+    "label": "$SERVICE_NAME for $ARCH",
+    "description": "Image recognition API with Go and Tensorflow",
+    "public": false,
+    "documentation": "https://github.com/tinrab/go-tensorflow-image-recognition/blob/master/README.md",
+    "url": "$SERVICE_NAME",
+    "version": "$SERVICE_VERSION",
+    "arch": "$ARCH",
+    "sharable": "multiple",
+    "requiredServices": [],
+    "userInput": [
+        {
+            "name": "MODEL_DIR",
+            "label": "Model directory",
+            "type": "string",
+            "defaultValue": "/tmp"
+        }
+    ],
+    "deployment": {
+        "services": {
+            "$SERVICE_NAME": {
+                "image": "${DOCKER_IMAGE_BASE}_$ARCH:$SERVICE_VERSION",
+		"ports": [
+                    {
+                        "HostPort": "8080:8080/tcp",
+                        "HostIP": "0.0.0.0"
+                    }
+                ]
+            }
+        }
+    }
+}
+

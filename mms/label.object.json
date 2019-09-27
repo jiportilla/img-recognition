@@ -1,0 +1,15 @@
+{
+  "objectID": "imagenet_comp_graph_label_strings.txt",            /* Required: A unique identifier of the object. */
+  "objectType": "txt",          /* Required: The type of the object. */
+  "destinationOrgID": "$HZN_ORG_ID", /* Required: The organization ID of the object (an object belongs to exactly one organization). */
+  "destinationID": "lubuntu.boulder.ivanp",       /* The node id (without org prefix) where the object should be placed. */
+                             /* If omitted the object is sent to all nodes with the same destinationType. */
+                             /* Delete this field when you are using destinationPolicy. */
+  "destinationType": "pattern-img-recognition-amd64",     /* The pattern in use by nodes that should receive this object. */
+                             /* If omitted (and if destinationsList is omitted too) the object is broadcast to all known nodes. */
+                             /* Delete this field when you are using policy. */
+  "expiration": "",          /* A timestamp/date indicating when the object expires (it is automatically deleted). The timestamp should be provided in RFC3339 format.  */
+  "version": "",             /* Arbitrary string value. The value is not semantically interpreted. The Model Management System does not keep multiple version of an object. */
+  "description": "tensorflow inception graph 5H",         /* An arbitrary description. */
+  "activationTime": ""       /* A timestamp/date as to when this object should automatically be activated. The timestamp should be provided in RFC3339 format. */
+}
